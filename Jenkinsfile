@@ -69,7 +69,7 @@ pipeline {
                     if (isUnix()) {
                         sh 'sleep 5 && curl -f http://localhost:3000'
                     } else {
-                        bat 'timeout /t 5 && curl -f http://localhost:3000'
+                        bat 'ping -n 5 127.0.0.1 >nul && curl.exe -f http://localhost:3000'
                     }
                 }
             }
