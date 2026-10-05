@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" errors="0" time="15.489">
-  <testsuite name="Student Application Endpoints Test Suite" errors="0" failures="0" skipped="0" timestamp="2026-10-05T15:56:40" time="13.856" tests="3">
-    <testcase classname="Student Application Endpoints Test Suite GET /health should return 200 and UP status" name="Student Application Endpoints Test Suite GET /health should return 200 and UP status" time="0.042">
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="14.539">
+  <testsuite name="Student Application Endpoints Test Suite" errors="0" failures="0" skipped="0" timestamp="2026-10-05T16:53:28" time="13.174" tests="3">
+    <testcase classname="Student Application Endpoints Test Suite GET /health should return 200 and UP status" name="Student Application Endpoints Test Suite GET /health should return 200 and UP status" time="0.065">
     </testcase>
-    <testcase classname="Student Application Endpoints Test Suite GET /api/student should return 200 with student details" name="Student Application Endpoints Test Suite GET /api/student should return 200 with student details" time="0.005">
+    <testcase classname="Student Application Endpoints Test Suite GET /api/student should return 200 with student details" name="Student Application Endpoints Test Suite GET /api/student should return 200 with student details" time="0.011">
     </testcase>
-    <testcase classname="Student Application Endpoints Test Suite GET / should return 200 and HTML page content" name="Student Application Endpoints Test Suite GET / should return 200 and HTML page content" time="0.005">
+    <testcase classname="Student Application Endpoints Test Suite GET / should return 200 and HTML page content" name="Student Application Endpoints Test Suite GET / should return 200 and HTML page content" time="0.011">
     </testcase>
   </testsuite>
 </testsuites>
