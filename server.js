@@ -9,7 +9,7 @@ app.get('/health', (req, res) => {
         status: 'UP',
         timestamp: new Date().toISOString(),
         service: 'student-app',
-        version: '1.0.0'
+        version: '2.0.0'
     });
 });
 
@@ -22,6 +22,7 @@ app.get('/api/student', (req, res) => {
         course: 'DevOps CI/CD Lab - Part 1',
         pipelineStatus: 'Automated Deployment via Jenkins & Docker',
         container: 'student-app-container',
+        version: 'v2.0',
         port: PORT
     });
 });
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps CI/CD Student Portal | K.R. Mangalam University</title>
+    <title>DevOps CI/CD Student Portal v2 | K.R. Mangalam University</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@ app.get('/', (req, res) => {
             --accent-purple: #8b5cf6;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-            --glow: rgba(6, 182, 212, 0.25);
+            --glow: rgba(16, 185, 129, 0.25);
         }
 
         * {
@@ -66,8 +67,8 @@ app.get('/', (req, res) => {
             position: relative;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 15% 20%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
                 linear-gradient(to bottom, #070b14, #0d1527);
         }
 
@@ -94,7 +95,7 @@ app.get('/', (req, res) => {
             width: 44px;
             height: 44px;
             border-radius: 12px;
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            background: linear-gradient(135deg, #10b981, #06b6d4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -150,8 +151,8 @@ app.get('/', (req, res) => {
         }
 
         .hero-banner {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
-            border: 1px solid var(--card-border);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(16, 185, 129, 0.3);
             border-radius: 20px;
             padding: 2.5rem;
             margin-bottom: 2rem;
@@ -160,27 +161,15 @@ app.get('/', (req, res) => {
             overflow: hidden;
         }
 
-        .hero-banner::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
         .hero-tag {
             display: inline-block;
-            background: rgba(6, 182, 212, 0.15);
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            color: var(--accent-cyan);
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: var(--accent-emerald);
             padding: 0.3rem 0.85rem;
             border-radius: 6px;
             font-size: 0.78rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 1rem;
@@ -190,7 +179,7 @@ app.get('/', (req, res) => {
             font-size: 2.3rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
-            background: linear-gradient(to right, #ffffff, #94a3b8);
+            background: linear-gradient(to right, #ffffff, #6ee7b7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.2;
@@ -222,7 +211,7 @@ app.get('/', (req, res) => {
 
         .glass-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(6, 182, 212, 0.4);
+            border-color: rgba(16, 185, 129, 0.4);
         }
 
         .card-header {
@@ -304,7 +293,7 @@ app.get('/', (req, res) => {
             padding: 1.25rem;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.82rem;
-            color: #38bdf8;
+            color: #34d399;
             line-height: 1.6;
             margin-top: 1rem;
             max-height: 140px;
@@ -312,7 +301,7 @@ app.get('/', (req, res) => {
         }
 
         .btn-action {
-            background: linear-gradient(135deg, #06b6d4, #2563eb);
+            background: linear-gradient(135deg, #10b981, #06b6d4);
             color: white;
             border: none;
             padding: 0.7rem 1.4rem;
@@ -346,31 +335,31 @@ app.get('/', (req, res) => {
         <div class="logo-group">
             <div class="badge-logo">🚀</div>
             <div class="logo-text">
-                <h1>DevOps CI/CD Portal</h1>
+                <h1>DevOps CI/CD Portal — Release v2</h1>
                 <p>K. R. Mangalam University — School of Engineering & Technology</p>
             </div>
         </div>
         <div class="live-status">
             <span class="pulse-dot"></span>
-            <span>Production Container: Running</span>
+            <span>Production Container: Running (v2.0)</span>
         </div>
     </header>
 
     <main>
         <div class="hero-banner">
-            <span class="hero-tag">Automated Pipeline Release</span>
-            <h2 class="hero-title">Node.js Web Application Deployed Successfully</h2>
+            <span class="hero-tag">Student App v2 — Automatic CD Deployment</span>
+            <h2 class="hero-title">Student App v2 Deployed Automatically!</h2>
             <p class="hero-subtitle">
-                This microservice was automatically verified, tested, packaged into a Docker container, and deployed via the Jenkins CI/CD pipeline upon code push.
+                This update (Student App v2) was committed to GitHub and deployed completely automatically by the Jenkins pipeline without any manual intervention!
             </p>
         </div>
 
         <div class="grid-cards">
-            <!-- Student & Lab Details -->
+            <!-- Student & Academic Details -->
             <div class="glass-card">
                 <div class="card-header">
                     <span class="card-title">👨‍🎓 Student & Academic Details</span>
-                    <span style="font-size: 0.75rem; color: var(--accent-cyan);">Lab Part 1</span>
+                    <span style="font-size: 0.75rem; color: var(--accent-emerald);">Part 2 Automated</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Candidate Name</span>
@@ -406,7 +395,7 @@ app.get('/', (req, res) => {
                 </div>
                 <div class="info-row">
                     <span class="info-label">Docker Image</span>
-                    <span class="info-value" style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">student-app:latest</span>
+                    <span class="info-value" style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">student-app:latest (v2.0)</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Published Port</span>
@@ -431,27 +420,27 @@ app.get('/', (req, res) => {
                 <div class="pipeline-steps">
                     <div class="step-item">
                         <span class="step-name">1. Checkout SCM</span>
-                        <span class="step-status">PASSED (2s)</span>
+                        <span class="step-status">PASSED</span>
                     </div>
                     <div class="step-item">
                         <span class="step-name">2. Install (npm ci)</span>
-                        <span class="step-status">PASSED (4s)</span>
+                        <span class="step-status">PASSED</span>
                     </div>
                     <div class="step-item">
                         <span class="step-name">3. Test (Jest & JUnit)</span>
-                        <span class="step-status">PASSED (3s)</span>
+                        <span class="step-status">PASSED</span>
                     </div>
                     <div class="step-item">
                         <span class="step-name">4. Build Image (Docker)</span>
-                        <span class="step-status">PASSED (6s)</span>
+                        <span class="step-status">PASSED</span>
                     </div>
                     <div class="step-item">
                         <span class="step-name">5. Deploy Container</span>
-                        <span class="step-status">PASSED (2s)</span>
+                        <span class="step-status">PASSED</span>
                     </div>
                     <div class="step-item">
                         <span class="step-name">6. Verify (curl :3000)</span>
-                        <span class="step-status">PASSED (5s)</span>
+                        <span class="step-status">PASSED</span>
                     </div>
                 </div>
             </div>
@@ -460,16 +449,16 @@ app.get('/', (req, res) => {
         <!-- Live API & Console Test Card -->
         <div class="glass-card">
             <div class="card-header">
-                <span class="card-title">🔍 Live Microservice API Test</span>
+                <span class="card-title">🔍 Live Microservice API Test (v2)</span>
                 <span style="font-size: 0.75rem; color: var(--text-secondary);">Direct Endpoint Verification</span>
             </div>
             <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                Click below to invoke the <code style="color: var(--accent-cyan); font-family: 'JetBrains Mono';">/health</code> and <code style="color: var(--accent-cyan); font-family: 'JetBrains Mono';">/api/student</code> endpoints live from this running instance.
+                Click below to invoke the <code style="color: var(--accent-emerald); font-family: 'JetBrains Mono';">/health</code> and <code style="color: var(--accent-emerald); font-family: 'JetBrains Mono';">/api/student</code> endpoints live from this running instance.
             </p>
             <button class="btn-action" onclick="fetchStudentApi()">Execute Health & API Probe</button>
             <div class="console-box" id="api-output">
-[System Ready] Awaiting API Probe invocation...
-Service: student-app v1.0.0
+[System Ready] Release v2.0 active.
+Service: student-app v2.0.0
 HTTP Listen: 0.0.0.0:3000
 Health endpoint: http://localhost:3000/health
             </div>

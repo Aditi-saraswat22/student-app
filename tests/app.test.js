@@ -7,6 +7,7 @@ describe('Student Application Endpoints Test Suite', () => {
         expect(response.statusCode).toBe(200);
         expect(response.body.status).toBe('UP');
         expect(response.body.service).toBe('student-app');
+        expect(response.body.version).toBe('2.0.0');
     });
 
     test('GET /api/student should return 200 with student details', async () => {
@@ -21,6 +22,6 @@ describe('Student Application Endpoints Test Suite', () => {
         const response = await request(app).get('/');
         expect(response.statusCode).toBe(200);
         expect(response.headers['content-type']).toContain('text/html');
-        expect(response.text).toContain('DevOps CI/CD Student Portal');
+        expect(response.text).toContain('Student App v2');
     });
 });
